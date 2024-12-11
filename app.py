@@ -18,7 +18,7 @@ db.init_app(app)
 jwt = JWTManager(app)
 migrate = Migrate(app, db)
 
-CORS(app, origins=["http://127.0.0.1:5501"], methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], allow_headers=["Content-Type", "Authorization"])
+CORS(app, origins=["https://flipr-ef66.onrender.com"], methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], allow_headers=["Content-Type", "Authorization"])
 
 
 app.register_blueprint(auth, url_prefix='/auth')
