@@ -10,7 +10,7 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ecommerce.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql12751306:rYZvLNsASm@sql12.freemysqlhosting.net:3306/sql12751306'
 app.config['JWT_SECRET_KEY'] = 'Atp@4466'
 app.config['SECRET_KEY'] = 'Atp@4466'
 app.config['SESSION_TYPE'] = 'filesystem' 
@@ -21,17 +21,18 @@ migrate = Migrate(app, db)
 CORS(app, origins=["https://flipr-ef66.onrender.com"], methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], allow_headers=["Content-Type", "Authorization"])
 
 
-app.register_blueprint(auth, url_prefix='/auth')
-app.register_blueprint(product_bp, url_prefix='/products')
-app.register_blueprint(cart_bp, url_prefix='/cart')
-app.register_blueprint(order_bp, url_prefix='/orders')
+app.register_blueprint(auth, url_prefix='/')
+app.register_blueprint(product_bp, url_prefix='/')
+app.register_blueprint(cart_bp, url_prefix='/')
+app.register_blueprint(order_bp, url_prefix='/')
 
 
 def create_app():
     app = Flask(__name__)
 
     # Configuration settings for the app (example)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ecommerce.db'  # Update as needed
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql12751306:rYZvLNsASm@sql12.freemysqlhosting.net:3306/sql12751306'
+  # Update as needed
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SECRET_KEY'] = 'Atp@4466'  # Update this with a secure secret key
 
