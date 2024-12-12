@@ -6,14 +6,14 @@ cart_bp = Blueprint('cart', __name__)
 
 # from flask import Blueprint
 
-@cart_bp.route('/delete', methods=['OPTIONS'])
+@cart_bp.route('cart/delete', methods=['OPTIONS'])
 def handle_preflight():
     return '', 204
 
 
 
 
-@cart_bp.route('/cart/add', methods=['POST'])
+@cart_bp.route('cart/add', methods=['POST'])
 @jwt_required()
 def add_to_cart():
     user_id = get_jwt_identity()
@@ -39,7 +39,7 @@ def add_to_cart():
     return jsonify({'message': 'Product added to cart successfully'}), 201
 
 
-@cart_bp.route('/update', methods=['PUT'])
+@cart_bp.route('cart/update', methods=['PUT'])
 @jwt_required()
 def update_cart():
     user_id = get_jwt_identity()
@@ -62,7 +62,7 @@ def update_cart():
     return jsonify({'message': 'Cart updated successfully'}), 200
 
 
-@cart_bp.route('/delete', methods=['DELETE'])
+@cart_bp.route('cart/delete', methods=['DELETE'])
 @jwt_required()
 def delete_from_cart():
     user_id = get_jwt_identity()
