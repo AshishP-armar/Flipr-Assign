@@ -77,7 +77,7 @@ def get_all_orders():
     return jsonify({'orders': order_list}), 200
 
 
-@order_bp.route('/orders/customer/<int:customer_id>', methods=['GET'])
+@order_bp.route('orders/customer/<int:customer_id>', methods=['GET'])
 @jwt_required()
 def get_orders_by_customer(customer_id):
     orders = Order.query.filter_by(user_id=customer_id).all()

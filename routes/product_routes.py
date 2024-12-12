@@ -55,7 +55,6 @@ def update_product(product_id):
     return jsonify({'message': 'Product updated successfully'}), 200
 
 @product_bp.route('/deleteproduct/<int:product_id>', methods=['DELETE'])
-
 def delete_product(product_id):
     product = Product.query.get(product_id)
     if not product:
