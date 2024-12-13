@@ -1,1 +1,60 @@
-# Flipr
+# Flipr Company Assignment
+
+## E-Commerce API
+
+This project is an API for an e-commerce website, providing functionalities for managing products, user authentication, cart operations, and orders.
+
+## Features
+## Features
+
+- **User Authentication**
+  - User Sign-up
+  - User Sign-in (JWT-based authentication)
+
+- **Product Management**
+  - Add products
+  - View product list
+  - View product details
+  - Update Product
+  - Delete Product
+
+- **Cart Management**
+  - Add items to cart
+  - View cart items
+  - Remove items from cart
+  - Update cart items
+
+- **Order Management**
+  - Place orders
+  - View order history
+
+## Technologies Used
+
+- **Backend Framework**: Flask
+- **Database**: MySQL 
+- **Authentication**: JSON Web Tokens (JWT)
+- **Development Tools**: Postman for API testing, Git for version control
+
+## API Endpoints
+
+### Authentication
+- **POST** `api_url/signup` - Create a new user account.
+- **POST** `api_url/signin` - Authenticate and obtain a JWT.
+
+### Products
+- **POST** `api_url/addproduct` - Add a new product.
+- **PUT** ` api_url/updateproduct/<product_id>` - Update the product based on product id.
+- **DELETE** `api_url/deleteproduct/<int:product_id>` - Delete the product based on its id.
+- **GET** `api_url/products` - To get product.
+
+### Cart
+- **POST** `api_url/cart/add` - Add an item to the cart.
+- **GET** `api_url/cart` - View items in the cart.
+- **PUT** `api_url/cart/update` - Update quantity of a cart item.
+- **DELETE** `api_url/cart/delete` - Remove an item from the cart.
+
+### Orders
+- **POST** `api_url/placeorder` - Place an order.
+- **GET** `api_url/getalloders` - View order history.
+- **GET** `api_url/orders/customer/<custmer_id>` - To get orders by customer.
+
