@@ -58,3 +58,33 @@ This project is an API for an e-commerce website, providing functionalities for 
 - **GET** `api_url/getalloders` - View order history.
 - **GET** `api_url/orders/customer/<custmer_id>` - To get orders by customer.
 
+## Installation
+1. Make Virtual ENV:
+```bash
+python3 -m vevn .venv
+. .venv/bin/actiavte   # To activate virtual env
+```
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/AshishP-armar/Flipr-Assign.git
+   cd Flipr-Assign
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt  # For Flask
+   ```
+4. DataBase: 
+```bash
+flask db init
+flask migrate "migration applied"
+flask db upgrade
+```
+
+## Contact
+
+For queries or collaboration, reach out to:
+- **Email**: ashishparmar9817@gmail.com
+- **LinkedIn**: [Ashish Parmar](https://www.linkedin.com/in/ashish-parmar-20b5a42bb)
+
+---
