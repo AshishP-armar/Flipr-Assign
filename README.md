@@ -5,7 +5,6 @@
 This project is an API for an e-commerce website, providing functionalities for managing products, user authentication, cart operations, and orders.
 
 ## Features
-## Features
 
 - **User Authentication**
   - User Sign-up
