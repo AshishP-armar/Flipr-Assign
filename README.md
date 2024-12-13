@@ -12,7 +12,6 @@ This project is an API for an e-commerce website, providing functionalities for 
 
 - **Product Management**
   - Add products
-  - View product list
   - View product details
   - Update Product
   - Delete Product
