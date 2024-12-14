@@ -56,6 +56,21 @@ This project is an API for an e-commerce website, providing functionalities for 
 - **GET** `api_url/getalloders` - View order history.
 - **GET** `api_url/orders/customer/<custmer_id>` - To get orders by customer.
 
+### **Project Structure**
+```bash
+├── app.py    # Main file.        
+├── migrations # Database migraton.
+├── routes/   # routes for product, cart, auth, order.
+│   ├── auth_routes.py     # for signup and signin.
+│   ├── cart_routes.py	   # for carts routes.
+    ├── order_routes.py    # for order route.
+│   └── product_routes.py  # for product route.
+├── models.py     # Database define for all cart, auth, order,	product.
+├── requirements.txt  # Python dependencies
+├── admin.py          # for making.
+└── README.md         # Project instructions.` 
+```
+
 ## Installation
 1. Make Virtual ENV:
 ```bash
